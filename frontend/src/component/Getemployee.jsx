@@ -9,7 +9,7 @@ const Getemployee = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3006/api/employee")
+      .get(" https://employeedash-backend.onrender.com")
       .then((res) => {
         console.log(res.data);
         setAllemp(res.data);
@@ -26,7 +26,7 @@ const Getemployee = () => {
     const confirmdeletion = window.confirm("Are you sure you want to delete");
     if (confirmdeletion) {
       axios
-        .delete(`http://localhost:3006/api/employee/${id}`)
+        .delete(` https://employeedash-backend.onrender.com/${id}`)
         .then((res) => {
           console.log(res.data);
           console.log("data deleted successfully");

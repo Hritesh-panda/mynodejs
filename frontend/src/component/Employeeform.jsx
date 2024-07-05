@@ -20,7 +20,7 @@ const Employeeform = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3006/api/employee", addEmp)
+      .post(" https://employeedash-backend.onrender.com", addEmp)
       .then((res) => {
         console.log(res.data);
         alert("Employee added successfully!");

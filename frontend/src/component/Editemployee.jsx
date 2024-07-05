@@ -17,7 +17,7 @@ const EditEmployee = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3006/api/employee/${id}`)
+      .get(`/${id}`)
       .then((response) => {
         setAddemp(response.data);
       })
@@ -37,7 +37,7 @@ const EditEmployee = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:3006/api/employee/${id}`, addEmp)
+      .put(` https://employeedash-backend.onrender.com/${id}`, addEmp)
       .then((response) => {
         console.log(response.data);
         alert("Employee updated successfully!");
